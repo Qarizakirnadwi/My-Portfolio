@@ -248,11 +248,20 @@
         </div>
       </footer>
           <script>
-        const hamburger = document.getElementById('hamburger');
+  const hamburger = document.getElementById('hamburger');
 const navLinks = document.getElementById('nav-links');
+const navLinkItems = document.querySelectorAll('.nav-links li');
 
+// Toggle the menu on hamburger click
 hamburger.addEventListener('click', () => {
     navLinks.classList.toggle('nav-active');
+});
+
+// Close the menu when a navigation link is clicked
+navLinkItems.forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks.classList.remove('nav-active'); // Hide the menu
+    });
 });
 
       </script>
