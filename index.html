@@ -9,7 +9,12 @@
 </head>
 <body>
     <nav>
-        <ul>
+         <div class="hamburger" id="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <ul class="nav-links" id="nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About Me</a></li>
             <li><a href="#education">Education</a></li>
@@ -242,5 +247,14 @@
           </div>
         </div>
       </footer>
+          <script>
+        const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('nav-links');
+
+hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('nav-active');
+});
+
+      </script>
 </body>
 </html>
