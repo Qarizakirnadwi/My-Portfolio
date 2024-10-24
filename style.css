@@ -4,24 +4,66 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 /* Navigation Styles */
 nav {
     background-color: #333;
     padding: 1rem;
 }
-
 nav ul {
     list-style: none;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap; /* Ensure responsiveness */
 }
-
-nav ul li {
-    display: inline-block;
-    margin: 10px 0;
+.hamburger {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    cursor: pointer;
 }
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: white; /* Change to your preferred color */
+    margin: 3px 0;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: white; /* Change to your preferred color */
+    text-decoration: none;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide nav links by default */
+        flex-direction: column;
+        position: absolute;
+        background-color: #333; /* Change to your preferred color */
+        top: 60px; /* Adjust based on your header height */
+        right: 0;
+        width: 100%;
+        z-index: 1;
+    }
+
+    .hamburger {
+        display: flex; /* Show hamburger icon on mobile */
+    }
+
+    .nav-active {
+        display: flex; /* Show nav links when active */
+    }
+}
+
 
 nav ul li a {
     color: white;
