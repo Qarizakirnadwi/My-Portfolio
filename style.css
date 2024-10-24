@@ -103,9 +103,11 @@ section {
 }
 
 .photo-container img {
-    width: 250px;
-    height: 350px;
-    border-radius: 10%; /* Circular image */
+  width: 100%; /* Ensure it fits the container */
+  height: auto; /* Maintain the aspect ratio */
+  object-fit: cover; /* This will ensure the image is cropped nicely */
+  border-radius: 10px; /* Rounded corners for a smooth look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow for appeal */
 }
 
 .about-text {
@@ -120,7 +122,7 @@ section {
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     .about-container {
         flex-direction: column;
         text-align: center;
