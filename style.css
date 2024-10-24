@@ -111,7 +111,7 @@ section {
 }
 
 .about-text {
-    max-width: 600px;
+    max-width: 768px;
     font-size: 1.2rem;
     line-height: 1.2;
     color: #111010;
@@ -122,7 +122,7 @@ section {
 }
 
 /* Responsive */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .about-container {
         flex-direction: column;
         text-align: center;
