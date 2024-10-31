@@ -7,14 +7,12 @@
 /* Base styles for the navigation */
 nav {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    background-color: #1b0210;
+    background-color: #333;
     padding: 10px 15px;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 100;
+    position: relative;
+    z-index: 10;
 }
 
 /* Hamburger menu for mobile */
@@ -57,7 +55,7 @@ nav {
         top: 60px; /* Start right below the header */
         left: 0;
         width: 100%;
-        background-color: #ee07a9;
+        background-color: #4407ee;
         display: flex;
         justify-content: center;
         flex-direction: row; /* Display links side-by-side */
@@ -94,6 +92,14 @@ nav {
     }
 }
 
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Ensure responsiveness */
+}
+
 nav ul li {
     display: inline-block;
     margin: 10px 0;
@@ -107,7 +113,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: #d80cc7;
+    background-color: #d80c8a;
     border-radius: 5px;
 }
 
@@ -130,42 +136,32 @@ section {
 
 /* Home Section Styles */
 .home-section {
-    background-image: radial-gradient(rgb(30, 8, 230), rgb(207, 1, 1)); /* Professional gradient */
-    color: rgb(235, 228, 232);
-    min-height: 80vh; /* Provides better height control */
+    background-image: radial-gradient(red,blue); /* Professional blue gradient */
+    color: rgb(250, 248, 255);
+    height: 25vh; /* Full screen height */
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 40px 20px;
-    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+    padding: 20px;
+    box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.5); /* Subtle shadow */
 }
 
 .home-section h1 {
-    font-size: 3rem; /* Reduced slightly for readability */
+    font-size: 4rem; /* Large, eye-catching font size */
     font-family: 'Poppins', sans-serif; /* Modern, professional font */
     font-weight: bold;
     letter-spacing: 2px;
-    text-transform: capitalize;
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+    text-transform: uppercase;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5); /* Shadow for depth */
 }
 
 /* Responsive Home Section */
 @media (max-width: 768px) {
-    .home-section {
-        padding: 30px 15px; /* Adjusted padding for smaller screens */
-    }
     .home-section h1 {
-        font-size: 2.5rem; /* Adjusted for smaller screens */
+        font-size: 2.5rem; /* Adjust for smaller screens */
     }
 }
-
-@media (max-width: 480px) {
-    .home-section h1 {
-        font-size: 2rem; /* Further adjustment for very small screens */
-    }
-}
-
 
 /* About Me Section Styles */
 #about {
@@ -181,30 +177,20 @@ section {
 }
 
 .photo-container {
-    
+    border: 5px solid #eb0ca1; /* Colorful border */
     border-radius: 10%;
-    padding: 10px;
+    padding: 5px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for photo */
-    background: linear-gradient(45deg, #ff0095, #050505, #0613ce, #00ff15);
-    background-size: 200% 200%;
-    animation: borderAnimation 5s linear infinite; /* Animation */
 }
 
 .photo-container img {
-    width: 600px; /* Ensure it fits the container */
-    height: 600px; /* Maintain the aspect ratio */
-    object-fit: cover; /* This will ensure the image is cropped nicely */
-    border-radius: 10px; /* Rounded corners for a smooth look */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow for appeal */
-  }
-   /* Border animation keyframes */
-   @keyframes borderAnimation {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-  }
-  
+  width: 100%; /* Ensure it fits the container */
+  height: auto; /* Maintain the aspect ratio */
+  object-fit: cover; /* This will ensure the image is cropped nicely */
+  border-radius: 10px; /* Rounded corners for a smooth look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow for appeal */
+}
 
 .about-text {
     max-width: 768px;
@@ -225,9 +211,9 @@ section {
     }
 
     .photo-container img {
-        width: 600px;
-        height: 600px;
-        border-radius: 10px;
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
         box-shadow: none;
     }
 
@@ -235,6 +221,7 @@ section {
         font-size: 1rem;
     }
 }
+
 /* Education Section Styles */
 #education {
     background-color: #f4f4f9; /* Light gray background */
